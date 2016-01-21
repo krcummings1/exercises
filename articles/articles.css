@@ -1,0 +1,71 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.blog-header {
+	margin-top: 50px;	
+	font-family: 'Dancing Script', cursive;
+	font-size: 20px;
+}
+
+/***** summary under header *****/
+#summary {
+	font-size: 16px;
+}
+
+.SanFran {
+	background-color: #C80000;
+	font-family: Georgia, "times new roman";
+	font-size: 12px;
+	color: #000000;
+	line-height: 2em;
+	padding: 1.25em;
+	border: 5px solid black;
+	border-radius: 50px;
+}
+
+.BigSur {
+	background-color: #FF2BDE;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000080;
+	line-height: 1.2em;
+	padding: 5px 50px;
+	margin: auto 100px;
+	border: 5px dashed black;
+	border-radius: 10px;
+}
+
+.JoshuaTree {
+	background-color: #E6E6E6;
+	font-family: "arial narrow";
+	font-size: 14px;
+	color: red;
+	line-height: 1em;
+	padding: 1.5em;
+	border: 2px outset;
+	border-radius: 100px;
+}
+
+.Disneyland {
+	background-color: black;
+	font-family: "arial";
+	font-size: 12px;
+	color: #FFFFFF;
+	line-height: .95em;
+	padding: 10px auto;
+	border: 5px double red;
+	border-radius: 5px 50px 5px 50px;
+}
+
+.SanDiego {
+	background-color: blue;
+	font-family: "Helvetica";
+	font-size: 12.5px;
+	color: yellow;
+	line-height: 1.2em;
+	padding: 30px 200px;
+	border: 5px inset;
+	border-radius: 100%;
+}
