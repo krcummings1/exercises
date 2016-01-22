@@ -1,0 +1,64 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	padding: 2px;
+}
+
+nav li {
+	float: left;
+	padding: 0 30px;
+}
+
+header {
+	border: 1px solid black;
+}
+
+.disabled {
+	color: grey;
+}
+
+a.disabled {
+	color: purple;
+}
+
+.active {
+	color: yellow;
+}
+
+.red {
+	color: red;
+}
+
+.blue {
+	color: blue;
+}
+.redsib {
+	background-color: red;
+}
+
+.bluesib {
+	background-color: blue;
+}
+
+.grandparent > h4 {
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.promo {
+	font-weight: bold;
+	color: gold;
+}
+
+footer input {
+	height: 25px;
+}
+
+.clear {
+	clear: both;
+	padding: 10px 0;
+}
