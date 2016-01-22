@@ -1,0 +1,7 @@
+input:required:valid {
+	background-color: green;
+}
+
+input:required:invalid {
+	background-color: red;
+}

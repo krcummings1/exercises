@@ -1,0 +1,73 @@
+<html>
+
+  <link rel="stylesheet" href="validation.css">
+
+<body>
+  <form action="form.html" method="POST">
+    <fieldset>
+      <legend>Loan Application</legend>
+        <label for="first-name" >What's your first name?</label>
+          <input type="text" name="first-name" autofocus>
+            <br/>
+      <label for="middle-initial">What's your middle initial?</label>
+          <input type="text" name="middle-initial">
+            </br>
+      <label for="last-name">What's your last name?</label>
+          <input type="text" name="last-name">
+      <br/>
+      <label for="address">Where do you live?</label>
+       <input type="address" name="address">
+      <br/>
+      <label for="occupation">Where do you work?</label>
+        <input type="occupation" name="occupation">
+      <br/>    
+      <label for="work-address">But literally and physically, where do you work?</label>
+        <input type="work-address" name="work-address">
+      <br/>
+    </fieldset>
+    <fieldset>
+      <legend>Tell us about this loan that you want.</legend>
+          <label for="loan-type">Type of loan</label>
+            <select id="loan-type" name="type">
+              <option>Commercial</option>
+              <option>Real estate</option>
+              <option>Personal</option>        
+              <option>Mortgage</option>
+            </select>
+      </fieldset>
+      <fieldset>
+        <legend>How much money do you want?</legend>
+          <label for="loan-amount">Dolla dolla bills</label>
+          <input name="loan-amount" type="currency">
+      </fieldset>
+      <fieldset>
+    <legend>How long do you want to owe us money?</legend>
+      <input type="radio" name="loan-length" value="5-years"> 5 years
+      <input type="radio" name="loan-length" value="15-years"> 15 years
+      <input type="radio" name="loan-length" value="30-years"> 30 years
+    </fieldset>
+    <fieldset>
+      <legend>Special conditions</legend>
+      <input type="checkbox" name="down-payment" value="down-payment"> I have a down payment
+      <input type="checkbox" name="outofstate-resident" value="outofstate-resident"> Out-of-state resident
+      <input type="checkbox" name="married" value="married"> Married    
+      <input type="checkbox" name="co-signer" value="co-signer"> Loan will be co-signed
+    </fieldset>
+    <fieldset>
+      <legend>Do you have something to say?</legend>
+      <label for="comments">Useless comments</label>
+      <textarea id="comments" name="comments"></textarea>
+    </fieldset>
+    <fieldset>
+      <label for="email-address">What's your email address?</label>
+        <input type="email" name="email" placeholder="you@somewebsite.com" required>
+        <br/>
+      <label for="telephone">Give me yo digits</label>
+        <input type="tel" name="telephone" placeholder="888-867-5309">
+    </fieldset>
+
+    <input type="submit" value="Send us all of the things"></input>
+  </form>
+</body>
+</html>
+
