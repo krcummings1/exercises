@@ -17,48 +17,63 @@ var result = document.getElementById("result");
 
 button.addEventListener("click", coinCounter);
 
-// first, I need to write out how many quarters I need based off of the input value, so for 80, I would have 3 quarters equaling 75, 80-75=5
+// first, I need to write out how many quarters I need based off of the input value, so for 80, 80/25 = 3.2  I would have 3 quarters equaling 75, then 80-75 = 5
 
-// then, I need to take the remaining value and determine how many dimes.... the remaining value from above is 5, so I need 0 dimes... moving on to nickels....
+// then, I need to take the remaining value (5) and determine how many dimes.... the remaining value from above is 5, so I need 0 dimes... moving on to nickels....
 // then, taking the remaining value and move on to nickels and pennies.... the remaining value is 5 so I need 1 nickel 
 
 // Now, I need to count the number for each coin 
 
 // Then output the coins 
-  var coinPurse = {};
+var coinPurse = {};
 
 function coinCounter () {
-  // Initialize a JavaScript object to hold the coins
-  var numberOfQuarters = (input.value / 25);
-    coinPurse.quarters = Math.floor(numberOfQuarters);
-  var remainder = (input.value - (coinPurse.quarters*25)); 
-      if (remainder > 25 && <=10) {
-        
-      }
-    // input.value - remainder
-    // do if statements... if <10, move on to dimes
+  var remainder;
 
-
-
-
-    // digits before decimal * 25 = wholeNumber, then input.value - wholeNumber
-  // digits before decimal * 25 = a number... then, input.value - that number = numberOfQuarters
-  console.log(coinPurse);
+  coinPurse.quarters = Math.floor(input.value / 0.25);
+  remainder = (input.value - (coinPurse.quarters*0.25)).toFixed(2);
   console.log(remainder);
+  console.log("quarters", coinPurse.quarters);
 
-  // figure out how to take decimals and 
+  if (remainder < 0.25 && remainder >= 0.10) {
+    coinPurse.dimes = Math.floor(remainder / 0.10);
+    remainder = (remainder - (coinPurse.dimes*0.10)).toFixed(2);
+      console.log(remainder);
+      console.log("dimes", coinPurse.dimes);
 
-// if numberOfQuarters is > 0.... continue
+      if (remainder < 0.10 && remainder >= 0.05) {
+    coinPurse.nickels = Math.floor(remainder / 0.05);
+    remainder = (remainder - (coinPurse.nickels*0.05)).toFixed(2);
+      console.log(remainder);
+      console.log("nickels", coinPurse.nickels);
 
-  // (input.value - numberOfQuarters);
+      if (remainder < 0.05 && remainder >= 0.01) {
+    coinPurse.pennies = (remainder / 0.01);
+      console.log(remainder);
+      console.log("pennies", coinPurse.pennies);
+    }
+    }
+  // else if (remainder < 0.10 && remainder >= 0.05) {
+  //   coinPurse.nickels = Math.floor(remainder / 0.05);
+  //   remainder = (remainder - (coinPurse.nickels*0.05));
+  //     console.log(remainder);
+  //     console.log("nickels", coinPurse.nickels);
+  //   }
+  // else if (remainder < 0.05 && remainder >= 0.01) {
+  //   coinPurse.pennies = Math.floor(remainder / 0.01);
+  //   remainder = (remainder - (coinPurse.pennies*0.01));
+  //     console.log(remainder);
+  //     console.log("pennies", coinPurse.pennies);
+  }
+  };
 
+coinCounter();
+console.log(coinPurse);
 
+// console.log(button.addEventListener("click", coinCounter), coinPurse);
 
-  return coinPurse;
-}
-
-var coins = coinCounter()
-console.log();
+// var coins = coinCounter()
+// console.log();
 
 
 
