@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sandwich Maker Exercise</title>
+</head>
+<body>
+
+<!-- // Your project should have one HTML file that has:
+
+// a section of options for each sandwich part
+// the ability to select multiple, or zero, choices for each section (such as turkey and bacon, or "no meat")
+// an empty DOM element into which the final sandwich order and its cost will be inserted -->
+
+  <div id="sandwich-options">  
+    <section id="bread">
+      Pick your bread: <select id="bread-options">
+        <option id="Options">
+          Options  
+        </option>
+        <option>
+          Wheat
+          <!-- no option id="wheat" because wheat is the value and the id -->
+        </option>
+        <option>
+          White
+        </option> 
+      </select>
+    </section>
+
+    <!-- in order to fix NaN/undefined error when clicking on topping instead of checkbox, need to say specify not just the "meat" id bit also the checkboxes // IF? -->
+
+    <section id="meat">
+      Choose meats:
+      <input type="checkbox" id="turkey">Turkey
+      <input type="checkbox" id="chicken">Chicken
+      <input type="checkbox" id="bacon">Bacon      
+      <input type="checkbox" id="no-meat">No Meat
+    </section>    
+
+    <section id="cheese">
+      Choose cheeses:
+      <input type="checkbox" id="american">American
+      <input type="checkbox" id="swiss">Swiss
+      <input type="checkbox" id="colby-jack">Colby Jack     
+      <input type="checkbox" id="no-cheese">No Cheese
+    </section>
+
+    <section id="veggies">
+      Choose veggies:
+      <input type="checkbox" id="lettuce">Lettuce
+      <input type="checkbox" id="spinach">Spinach     
+      <input type="checkbox" id="green-peppers">Green Peppers
+      <input type="checkbox" id="tomatoes">Tomatoes
+    </section>
+
+    <section id="condiments">
+      Choose condiments:
+      <input type="checkbox" id="ranch">Ranch
+      <input type="checkbox" id="ketchup">Ketchup
+      <input type="checkbox" id="mustard">Mustard     
+      <input type="checkbox" id="mayo">Mayo
+    </section>
+  </div>
+
+  Total price:<div id="total-sandwich-price"></div>
+  
+  <script type="text/javascript" src="javascripts/SandwichMaker.js"></script>
+  <script type="text/javascript" src="javascripts/bread.js"></script>
+  <script type="text/javascript" src="javascripts/cheese.js"></script>
+  <script type="text/javascript" src="javascripts/veggies.js"></script>
+  <script type="text/javascript" src="javascripts/condiments.js"></script>
+  <script type="text/javascript" src="javascripts/DOMhandler.js"></script>
+</body>
+</html>
+
+
+
+
+
