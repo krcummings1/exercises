@@ -8,15 +8,31 @@
 
 <body>
 
+<!-- In the HTML, have one input field where someone can enter in a temperature.
+Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to.
+Create a block level element that will hold the text of the converted temperature.
+Create a button that, when clicked, displays the converted temperature.
+Create another button that, when clicked, clears any text in the input field. -->
+
 <div id="converter">
+  
+  <p>Enter temperature: <input type="text" id="input"></p>
 
-<p>Enter dollar amount: <input type="text" id="input"></p>
+  <input type="radio" name="radio-button" id="fahrenheit">Fahrenheit
+  <input type="radio" name="radio-button" id="celsius">Celsius
+  <!-- naming the buttons forced user to toggle between buttons, versus selecting both  -->
 
-<input type="submit" id="button" value="submit"></input>
+  <p id="converted-temp"></p>
 
-<p id="result"></p>
+  <div id="buttons">
+    <input type="submit" id="convert-button" value="convert">
+    <input type="submit" id="clear-button" value="clear">
+  </div>
+
 </div>
 
+
 <script type="text/javascript" src="converter.js"></script>
+
 </body>
 </html>

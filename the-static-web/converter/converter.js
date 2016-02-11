@@ -1,69 +1,75 @@
-// Write a program that will convert a dollar amount to the number of coins that make up the amount. Use the common American coins of quarters, dimes, nickels, and pennies.
+// Instructions
 
-/*
-  Input: 0.67
-  Output:
-  {
-    quarters: 2,
-    dimes: 1,
-    nickels: 1,
-    pennies: 2
+// Write a program that will convert a temperature from fahrenheit to celsius, or from celsius to fahrenheit.
+
+// In the HTML, have one input field where someone can enter in a temperature.
+// Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to.
+// Create a block level element that will hold the text of the converted temperature.
+// Create a button that, when clicked, displays the converted temperature.
+// Create another button that, when clicked, clears any text in the input field.
+
+// Add an event handler to the input field that checks if the user pressed the enter key, and if that happens, perform the conversion.
+
+// addEventListener("keydown", function(event){
+//   // === means absolutely equals
+//   //  || means OR
+//   if(event.keyCode === 13 && (height === document.activeElement || character === document.activeElement))
+//   {
+//     // event.preventDefault();
+//   // console.log("fired");
+//     checkParams();
+//   }
+//   // else{
+//   //  console.log("hey");
+//   // }
+// });
+
+// If the temperature is greater than 90F/32C the color of the converted temperature should be red.
+// If the temperature is less than 32F/0C the color of the converted temperature should be blue.
+// For any other temperature, the color should be green.
+
+
+// Get a reference to the button element in the DOM
+var convertButton = document.getElementById("convert-button");
+var clearButton = document.getElementById("clear-button");
+var fahrenheitRadioButton = document.getElementById("fahrenheit");
+var celsiusRadioButton = document.getElementById("celsius");
+
+convertButton.addEventListener("click", determineConverter);
+
+
+// This function should determine which conversion should
+// happen based on which radio button is selected.
+function determineConverter (clickEvent) {
+  if(fahrenheitRadioButton.checked){
+    toFahrenheit();
   }
+  if(celsiusRadioButton.checked){
+    toCelsius();
+  }
+  console.log("event", clickEvent);
+}
 
-*/
-var amountInput = document.getElementById("input");
-var button = document.getElementById("button");
-var result = document.getElementById("result");
+// To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.
+function toFahrenheit () {
+  var convertedToFahrenheit;
+    convertedToFahrenheit = ((input.value*1.8)+32);
+    console.log("convertedToFahrenheit", convertedToFahrenheit);
+}
 
-button.addEventListener("click", coinCounter);
-// ^ says when button is "click"ed, run coinCounter function
-// this is how I'm calling this function, based off of the "click" event on the button
-
-var coinPurse = {
-  "quarters": 0,
-  "dimes": 0,
-  "nickels": 0,
-  "pennies": 0,
-};
-// originally had an empty object, but set it up with keys and values to set the values to zero
-// if there were no dimes, it was coming back as undefined because I didn't give it a base value
-
-function coinCounter () {
-  var remainder;
-  coinPurse.quarters = Math.floor(input.value / 0.25);
-  remainder = (input.value - (coinPurse.quarters*0.25)).toFixed(2);
-  console.log(remainder);
-  console.log("quarters", coinPurse.quarters);
-  if (remainder < 0.25 && remainder >= 0.10) {
-    coinPurse.dimes = Math.floor(remainder / 0.10);
-    remainder = (remainder - (coinPurse.dimes*0.10)).toFixed(2);
-    console.log(remainder);
-    console.log("dimes", coinPurse.dimes);
-    }
-  if (remainder < 0.10 && remainder >= 0.05) {
-    coinPurse.nickels = Math.floor(remainder / 0.05);
-    remainder = (remainder - (coinPurse.nickels*0.05)).toFixed(2);
-    console.log(remainder);
-    console.log("nickels", coinPurse.nickels);
-    }
-  if (remainder < 0.05 && remainder >= 0.01) {
-    coinPurse.pennies = (remainder / 0.01);
-    console.log(remainder);
-    console.log("pennies", coinPurse.pennies);
-    }
-    console.log("coinPurse object", coinPurse);
-    outputToDOM();
-};
+function toCelsius () {
+  var convertedToCelsius;
+    convertedToCelsius = ((input.value-32)*0.5556);
+    console.log("convertedToCelsius", convertedToCelsius);
+}
 
 
-function outputToDOM(){
-  console.log(coinPurse);
-  result.innerHTML = `<div>Quarters: ${coinPurse.quarters}</div>`
-  + `<div>Dimes: ${coinPurse.dimes}</div>`
-  + `<div>Nickels: ${coinPurse.nickels}</div>`
-  +`<div>Pennies: ${coinPurse.pennies}</div>`;
-};
-// object shows up in console, but can't output just an object to the DOM, I have to set it up with the keys and values (data within)
+// Assign a function to be executed when the button is clicked
+
+// button.addEventListener("click", determineConverter);
+
+
+
 
 
 
